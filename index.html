@@ -20,6 +20,22 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
    <link rel="stylesheet" href="style/style.css">
    <title>Burdur Vetpet - Veteriner Polikliniği</title>
+
+   <style>
+      .custom-btn {
+    /* Normal Durum (Arka Plan ve Metin Rengi) */
+    background-color: #161a66; /* Kendi özel yeşil tonunuz */
+    border-color: #161a66;
+    color: #FFFFFF; /* Metin Rengi: Beyaz */
+}
+
+.custom-btn:hover {
+    /* Fare Üzerine Gelince (Hover) Durumu */
+    background-color: #0a0d3c; /* Bir ton koyu yeşil */
+    border-color: #0a0d3c;
+    color: #FFFFFF;
+}
+   </style>
 </head>
 
 <body>
@@ -89,9 +105,11 @@
                   <h1 class="pb-4">Hakkımızda</h1>
                   <p id="us-text">Kliniğimiz, alanında deneyimli veteriner hekimlerimiz tarafından hizmet verilmektedir. Kliniğimiz, müşterilerimizin evcil hayvanlarını sağlığına kavuşturmaya odaklanmıştır.</p>
                </div>
-                                       <button onclick="parent.location='contact.html'" id="vet class="btn border mb-5 rounded-5 mt-3 w-50 ">Hekimlerimiz</button>
             </div>
-         </div>
+            <div class="text-center">
+         <a href="doctors.html" style="text-align: center; margin-top: 20px; justify-content: center; width: 150px;" class="btn custom-btn text-center">Hekimlerimiz</a>
+</div>
+      </div>
       </div>
    </section>
 
@@ -180,8 +198,15 @@
                      </div>
                   </div>
                </div>
+
+
+
             </div>
-         </div>
+            <div class="text-center">
+               <a href="blog.html" style="text-align: center; width: 250px; align-items: center; justify-content: center;" class="btn btn-primary">Diğer blog yazıları</a>
+               </div>
+
+            </div>
       </div>
 
    </section>
