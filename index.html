@@ -1,257 +1,191 @@
-<!doctype html>
-<html lang="en">
-
+<!DOCTYPE html>
+<html lang="tr">
 <head>
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <meta name='dmca-site-verification' content='S1djLzFzMFgzSjVnaFY2UWh1Yno5WXpYV05PUVpRYzdTZlJEcjBDU0pacz01' />
-   <meta name="description" content="Burdur Merkez'de 7/24 Acil Veteriner ve Kapsamlı Poliklinik Hizmetleri.">
-   <meta property="og:title" content="Burdur Vetpet Veteriner Kliniği">
-   <meta property="og:description" content="Burdur 7/24 Veteriner Polikliniği">
-   <meta property="og:image" content="https://burdurvetpet.com/img/logo2.png">
-   <link rel="canonical" href="https://burdurvetpet.com/index.html" />
-   <link rel="icon" href="img/logo.png">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet">
-   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-   <link rel="stylesheet" href="style/style.css">
-   <title>Burdur Vetpet - Veteriner Polikliniği</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Burdur Vetpet</title>
+<link rel="icon" href="img/logo.png" type="image/png">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<style>
+   :root {
+      --navy: #161a66;
+      --navy-dark: #0e1147;
+      --navy-soft: #3d4199;
+      --accent: #1fa971;
+      --accent-dark: #148055;
+      --accent-soft: #d9f5e6;
+      --bg-tint: #eef0fb;
+      --bg-tint-2: #f7f8fd;
+      --gray-300: #dfe1ef;
+      --text-muted: #5b5e79;
+      --radius-lg: 28px;
+      --radius-md: 18px;
+      --radius-sm: 12px;
+      --shadow-soft: 0 24px 48px -20px rgba(22, 26, 102, 0.28);
+      --shadow-card: 0 14px 34px -18px rgba(22, 26, 102, 0.22);
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+   }
 
-   <style>
-      .custom-btn {
-    /* Normal Durum (Arka Plan ve Metin Rengi) */
-    background-color: #161a66; /* Kendi özel yeşil tonunuz */
-    border-color: #161a66;
-    color: #FFFFFF; /* Metin Rengi: Beyaz */
-}
+   * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+   }
 
-.custom-btn:hover {
-    /* Fare Üzerine Gelince (Hover) Durumu */
-    background-color: #0a0d3c; /* Bir ton koyu yeşil */
-    border-color: #0a0d3c;
-    color: #FFFFFF;
-}
-   </style>
+   html, body {
+      height: 100%;
+   }
+
+   body {
+      font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background-color: var(--bg-tint-2);
+      background-image: url(img/background.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 24px;
+   }
+
+   .maintenance-card {
+      position: relative;
+      width: 100%;
+      max-width: 620px;
+      background-color: #fff;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-soft);
+      padding: 56px 44px;
+      text-align: center;
+      overflow: hidden;
+   }
+
+
+
+   .maintenance-card > * {
+      position: relative;
+      z-index: 1;
+   }
+
+   #logo {
+      width: 130px;
+      background-color: white;
+      border-radius: 20%;
+      box-shadow: var(--shadow-card);
+      margin-bottom: 28px;
+   }
+
+   .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent-dark);
+      background-color: var(--accent-soft);
+      padding: 8px 16px;
+      border-radius: 999px;
+      margin-bottom: 20px;
+   }
+
+   .eyebrow::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: var(--accent-dark);
+      display: inline-block;
+   }
+
+   h1 {
+      font-size: 34px;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.15;
+      margin-bottom: 16px;
+   }
+
+   p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--text-muted);
+      max-width: 460px;
+      margin: 0 auto 28px;
+   }
+
+   .contact-info {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+   }
+
+   .contact-info a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      background-color: var(--navy);
+      padding: 12px 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      box-shadow: 0 14px 30px -12px rgba(22, 26, 102, 0.55);
+      transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease), background-color 0.35s var(--ease);
+   }
+
+   .contact-info a:hover {
+      transform: translateY(-3px);
+      background-color: var(--accent);
+      box-shadow: 0 18px 34px -10px rgba(22, 26, 102, 0.55);
+   }
+
+   .paws {
+      margin-top: 32px;
+      font-size: 13px;
+      color: var(--gray-300);
+      color: #9a9dc2;
+   }
+
+   @media only screen and (max-width: 480px) {
+      .maintenance-card {
+         padding: 40px 24px;
+      }
+
+      h1 {
+         font-size: 26px;
+      }
+
+      p {
+         font-size: 14px;
+      }
+
+      #logo {
+         width: 100px;
+      }
+   }
+</style>
 </head>
-
 <body>
-    <nav class="navbar navbar-expand-lg d-flex justify-content-center sticky-top bg-light ">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="img/logo2.png" width="200">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ps-3 fs-5 ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link fontcolor" aria-current="page" href="index.html">Ana Sayfa</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fontcolor " href="contact.html">Bize Ulaşın</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fontcolor " href="blog.html">Blog</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
-   <section class="d-flex align-items-center" id="home">
-      <div class="container">
-         <div class="row d-flex justify-content-center">
-            <div class="col-md-1 home-position"></div>
-            <div class="col-md-6 fontstyle">
-               <h1 class="title-home fontcolor">Vetpet Veteriner Polikliniği</h1><br>
-               <p class="subtitle-home">Evcil hayvanınız için en iyi tedaviyi ve olanakları sağlıyoruz. 
-               </p>
-               <button onclick="parent.location='contact.html'" id="vet" class="btn border mb-5 rounded-5 mt-3 w-50 ">İletişim</button>
-            </div>
-            <div class="col-md-4 d-flex align-items-center justify-content-center mb-5">
-               <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                  <div class="carousel-inner">
-                     <div class="carousel-item active d-flex justify-content-center">
-                        <img src="img/dog3.jpeg" class="d-block w-100" alt="dog" id="dog">
-                     </div>
-                     <div class="carousel-item d-flex justify-content-center">
-                        <img src="img/cat2.jpeg" class="d-block w-100" alt="cat" id="dog">
-                     </div>
-                     <div class="carousel-item d-flex justify-content-center">
-                        <img src="img/dog2.jpeg" class="d-block w-100" alt="dog" id="dog">
-                     </div>
-                     <div class="carousel-item d-flex justify-content-center">
-                        <img src="img/cat3.jpeg" class="d-block w-100" alt="dog" id="dog">
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="col-md-1"></div>
-         </div>
-      </div>
-   </section>
+   <div class="maintenance-card">
+      <img id="logo" src="img/logo.png" alt="Paw Care Logo">
+      <h1>Şu anda bakımdayız</h1>
+      <p>Sistemi daha iyi hale getirmek için kısa bir bakım çalışması yürütüyoruz. En kısa sürede tekrar hizmetinizdeyiz. Anlayışınız için teşekkür ederiz.</p>
 
-   <section class="p-5 fontstyle" id="about">
-      <div class="container">
-         <div data-aos="zoom-in">
-            <div class="row d-flex justify-content-center" id="us">
-               <div class="col-md-9 text-center py-4   border rounded-4" id="us-background">
-                  <h1 class="pb-4">Hakkımızda</h1>
-                  <p id="us-text">Kliniğimiz, alanında deneyimli veteriner hekimlerimiz tarafından hizmet verilmektedir. Kliniğimiz, müşterilerimizin evcil hayvanlarını sağlığına kavuşturmaya odaklanmıştır.</p>
-               </div>
-            </div>
-            <div class="text-center">
-         <a href="doctors.html" style="text-align: center; margin-top: 20px; justify-content: center; width: 150px;" class="btn custom-btn text-center">Hekimlerimiz</a>
-</div>
-      </div>
-      </div>
-   </section>
-
-   <section>
-      <div class="container fontstyle fontcolor">
-         <div class="hide">
-            <div data-aos="zoom-out">
-               <h1 id="offer">HİZMETLERİMİZ</h1>
-            </div>
-         </div>
-         <div class=" row d-flex justify-content-center py-5 my-5">
-            <div class="col-md-4 text-end">
-               <div data-aos="fade-right">
-                  <br>
-                  <h2 class="offer-title">Aşılama Programı&nbsp;<img src="img/Vaccine.png" alt="vaccine" id="icon">
-                     </h1>
-                     <p class="offer-text">Aşıların hayvanlara uygulanması, hayvanın bağışıklık sistemine yardımcı olmak ve hastalıklara karşı korumak için fazlasıyla faydalıdır.</p>
-                     <br>
-                     <h2 class="offer-title">Ultrasonografi &nbsp;<img src="img/Radiology.png" alt="radiology" id="icon">
-                     </h2>
-                     <p class="offer-text">Veteriner polikliniğimizde sunulan ultrasonografi hizmeti, evcil hayvanınızın iç organlarını detaylı bir şekilde görüntüleyerek sağlık sorunlarını tespit etmemize olanak tanır. Uzman veteriner hekimlerimiz, bu teknolojiyi kullanarak hayvanınızın sağlığını korumak ve doğru tedavi planlarını oluşturmak için hassas teşhisler yapar.</p>
-               </div>
-            </div>
-            <div class="col-md-4 d-flex align-items-center justify-content-center">
-               <div class="hide">
-                  <div data-aos="zoom-in-up">
-                     <img src="img/Bat_Harness_Costume_for_Cats-removebg-preview.png" alt="batman cat" id="cat">
-                  </div>
-               </div>
-            </div>
-            <div class="col-md-4 fontstyle fontcolor">
-               <div class="hide">
-                  <div data-aos="fade-left">
-                     <br>
-                     <h2 class="offer-title">Hijyen&nbsp;<img src="img/Hygiene.png" alt="hygiene" id="icon">
-                        </h1>
-                        <p class="offer-text">Evcil hayvanınızın temizliğine dikkat ediyoruz. Böylece hastalığa neden olan mikroplardan da korumuş oluyoruz</p>
-                        <br>
-                        <h2 class="offer-title">Tehşis <img src="img/Medicine.png" alt="medicine" id="icon"></h2>
-                        <p class="offer-text">hayvanınıza tehşisi koyduktan sonra en iyi şekilde tedaviye başlıyoruz.</p>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </section>
-
-   <section id="articles" class="fontstyle">
-      <h1 class="text-center fontcolor pt-5" id="learn">DAHA FAZLA</h1>
-      <hr id="color">
-      <div class="container py-5 d-flex justify-content-center">
-         <div class="row">
-            <div class="col-md-4 d-flex pb-3 justify-content-center">
-               <div data-aos="flip-left">
-                  <div class="card articles-img">
-                     <img src="img/articles 1.jpg" alt="articles2" class="card-img-top">
-
-                     <div class="card-body">
-                        <h5 class=" py-2 texttransform card-title">Evcil hayvanınızı nasıl temiz tutabilirsiniz?</h5>
-                        <p class="pb-1 card-text">Sahipler olarak evcil hayvanlarımızın sadece bedenlerinin değil, aynı zamanda çevrelerinin de temizliğine dikkat etmeliyiz...</p>
-                        <a href="bilgi1.html" class="btn btn-primary">Devamını Oku</a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="col-md-4 d-flex pb-3 justify-content-center">
-               <div data-aos="flip-left">
-                  <div class="card articles-img">
-                     <img src="img/articles 2.jpg" alt="articles2" class="card-img-top">
-                     <div class="card-body">
-                        <h5 class=" py-2 texttransform ">Evcil hayvanınız için doğru yiyecek seçimi</h5>
-                        <p class=" pb-1 card-text">Tıpkı insanlar gibi, hayvanlar da vücutlarında besleyici besin maddeleri olmadığında sağlıkları ve savunmaları zayıflayacaktır.</p>
-                        <a href="bilgi2.html" class="btn btn-primary">Devamını Oku</a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="col-md-4 d-flex pb-3 justify-content-center">
-               <div data-aos="flip-left">
-                  <div class="card articles-img">
-                     <img src="img/articles 3.jpg" alt="articles3" class="card-img-top">
-                     <div class="card-body">
-                        <h5 class="py-2 texttransform card-title" id="articles3-title">Evcil hayvanların evde kendilerini güvende ve rahat hissetmelerini nasıl sağlarız?</h5>
-                        <p class="pb-2 card-text" id="articles3-text">Ev, evcil hayvanlarımızın yaşam alanıdır, bu nedenle evde onların rahat ve güvende hissetmelerini sağlamalıyız.</p>
-                        <a href="bilgi3.html" class="btn btn-primary">Devamını Oku</a>
-                     </div>
-                  </div>
-               </div>
-
-
-
-            </div>
-            <div class="text-center">
-               <a href="blog.html" style="text-align: center; width: 250px; align-items: center; justify-content: center;" class="btn btn-primary">Diğer blog yazıları</a>
-               </div>
-
-            </div>
+      <div class="contact-info">
+         <a href="https://www.instagram.com/vetpetveterinerpoliklinigi/"><i class="fa-brands fa-instagram"></i> Instagram</a>
       </div>
 
-   </section>
+      <div class="paws">Burdur Vetpet &copy 2026</div>
+   </div>
 
-
-   <footer class="h-100" id="footer">
-      <div class="container">
-         <div class="row d-flex justify-content-center py-5 footer-fontcolor fontstyle">
-            <div class="col-md-4 d-flex align-items-center justify-content-center" id="logo-position">
-               <img class="mx-5" src="img/logo1.png" alt="logo" id="logo">
-            </div>
-            <div class="col-md-4 pb-5">
-               <h3>Çalışma Saatleri</h4><br>
-                  <p>Pzt - Cmt: 08:30 - 19:30</p>
-            </div>
-            <div class="col-md-4">
-               <h3>Bize Ulaşın</h3><br>
-               <p><i class="ph-map-pin-fill"></i> Özgür, Hızır İlyas Cd. no: 9/A, Merkez/Burdur</p>
-               <p><i class="ph-envelope-fill"></i>&nbsp; info@burdurvetpet.com</p>
-               <p><i class="ph-phone-incoming-fill">
-                  </i>&nbsp; +90 532 721 01 76</p>
-            </div>
-            <div class="col-md-10 py-3">
-               <p>Copyright &copy2025 Vetpet</p>
-               <p>Powered by <a href="https://notreally.xyz">notReally</a></p>
-               <p><a href="kvkk.html">KVK Metni</a></p>
-            </div>
-         </div>
-      </div>
-
-   </footer>
-
-   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-   <script>
-      AOS.init();
-   </script>
-   <script src="https://unpkg.com/phosphor-icons"></script>
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-      crossorigin="anonymous"></script>
 </body>
-
 </html>
-
-
-
-
-
